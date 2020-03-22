@@ -24,7 +24,7 @@ class CntndImage {
         list($imageWidth, $imageHeight) = getimagesize($filename);
         $image = new stdClass();
         $image->thumb = $image_source;
-        $image->src = this::originalImage($image_source, $extra_path);
+        $image->src = self::originalImage($image_source, $extra_path);
         $image->alt = $imageDescription;
         $image->width = $imageWidth;
         $image->height = $imageHeight;
