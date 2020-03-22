@@ -14,6 +14,7 @@ $fancyboxThumb = (bool) "CMS_VALUE[3]";
 $fancyboxPath = "CMS_VALUE[4]";
 $additionalClass = "CMS_VALUE[5]";
 
+// image/vars
 $imageSource = "CMS_IMG[1]";
 $imageDescription = "CMS_IMGDESCR[1]";
 if ($editmode) {
@@ -30,7 +31,7 @@ if ($editmode){
 
 $tpl = cSmartyFrontend::getInstance();
 $tpl->assign('editor', $imageEditor);
-$tpl->assign('image', CntndImage::image($imageSource, $fancyboxThumb, $fancyboxPath));
+$tpl->assign('image', CntndImage::image($imageSource, $imageDescription, $fancyboxThumb, $fancyboxPath));
 
 $tpl->assign('fancybox', $fancybox);
 $tpl->assign('fancyboxGroup', $fancyboxGroup);

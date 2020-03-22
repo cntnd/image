@@ -20,7 +20,7 @@ class CntndImage {
     return $image;
   }
 
-  public static function image($image_source, $thumb, $extra_path=NULL){
+  public static function image($image_source, $imageDescription, $thumb, $extra_path=NULL){
     if (0 < strlen($image_source)) {
         $clientConfig = cRegistry::getClientConfig(cRegistry::getClientId());
         $filename = str_replace($clientConfig["upl"]["htmlpath"], $clientConfig["upl"]["path"], $image_source);
