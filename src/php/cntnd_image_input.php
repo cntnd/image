@@ -61,7 +61,7 @@ cInclude('module', 'includes/style.cntnd_image_input.php');
       <?php
         foreach ($classes as $class) {
           $selected="";
-          if ($additionalClass==$classes){
+          if ($additionalClass==$class){
             $selected = 'selected="selected"';
           }
           echo '<option '.$selected.' value="'.$class.'">'.$class.'</option>';
