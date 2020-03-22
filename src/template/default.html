@@ -1,0 +1,13 @@
+<!-- cntnd_navigation/template/default.html -->
+{$editor}
+
+{if NULL neq $image}
+	{if $fancybox}
+		<a href="{$image->src}"
+			{if 0 lt $fancyboxGroup|strlen}data-fancybox="{$fancyboxGroup}"{else}data-fancybox{/if}
+			{if 0 lt $image->alt|strlen}data-caption="{$image->alt}"{/if}>
+	{/if}
+    <img src="{$image->thumb}" alt="{$image->alt}" class="{$additionalClass}" />
+	{if $fancybox eq "active" or 0 lt $link|strlen}</a>{/if}
+{/if}
+<!-- cntnd_navigation/template/default.html -->

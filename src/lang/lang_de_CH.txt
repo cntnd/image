@@ -1,0 +1,6 @@
+MODULE=Bild
+SELECT_CHOOSE=-bitte wählen-
+FANCYBOX=Fancybox aktivieren
+FANCYBOX_GROUP=Fancybox Gruppe (optional)
+FANCYBOX_PATH=Bei Vorschaubilder, Original Verzeichnis (optional, Standard 'gross')
+ADDITIONAL_CLASS=Zusätzliche CSS-Klasse
