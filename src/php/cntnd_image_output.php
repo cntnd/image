@@ -10,8 +10,9 @@ $editmode = cRegistry::isBackendEditMode();
 // input/vars
 $fancybox = (bool) "CMS_VALUE[1]";
 $fancyboxGroup = "CMS_VALUE[2]";
-$fancyboxPath = "CMS_VALUE[3]";
-$additionalClass = "CMS_VALUE[4]";
+$fancyboxThumb = (bool) "CMS_VALUE[3]";
+$fancyboxPath = "CMS_VALUE[4]";
+$additionalClass = "CMS_VALUE[5]";
 
 $imageSource = "CMS_IMG[1]";
 $imageDescription = "CMS_IMGDESCR[1]";
@@ -29,7 +30,7 @@ if ($editmode){
 
 $tpl = cSmartyFrontend::getInstance();
 $tpl->assign('editor', $imageEditor);
-$tpl->assign('image', CntndImage::image($imageSource, $fancyboxPath));
+$tpl->assign('image', CntndImage::image($imageSource, $fancyboxThumb, $fancyboxPath));
 
 $tpl->assign('fancybox', $fancybox);
 $tpl->assign('fancyboxGroup', $fancyboxGroup);

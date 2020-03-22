@@ -5,8 +5,9 @@
 $uuid = rand();
 $fancybox = (bool) "CMS_VALUE[1]";
 $fancyboxGroup = "CMS_VALUE[2]";
-$fancyboxPath = "CMS_VALUE[3]";
-$additionalClass = "CMS_VALUE[4]";
+$fancyboxThumb = (bool) "CMS_VALUE[3]";
+$fancyboxPath = "CMS_VALUE[4]";
+$additionalClass = "CMS_VALUE[5]";
 $classes = array(
   'top10',
   'top20',
@@ -49,14 +50,19 @@ cInclude('module', 'includes/style.cntnd_image_input.php');
     <input id="fancybox_group_<?= $uuid ?>" name="CMS_VAR[2]" type="text" value="<?= $fancyboxGroup ?>" />
   </div>
 
+  <div class="form-check form-check-inline">
+    <input id="fancybox_<?= $uuid ?>" class="form-check-input" type="checkbox" name="CMS_VAR[3]" value="true" <?php if($fancyboxThumb){ echo 'checked'; } ?> />
+    <label for="fancybox_<?= $uuid ?>"><?= mi18n("FANCYBOX_THUMB") ?></label>
+  </div>
+
   <div class="form-group">
     <label for="fancybox_path_<?= $uuid ?>"><?= mi18n("FANCYBOX_PATH") ?></label>
-    <input id="fancybox_path_<?= $uuid ?>" name="CMS_VAR[3]" type="text" value="<?= $fancyboxPath ?>" />
+    <input id="fancybox_path_<?= $uuid ?>" name="CMS_VAR[4]" type="text" value="<?= $fancyboxPath ?>" />
   </div>
 
   <div class="form-group">
     <label for="additional_class_<?= $uuid ?>"><?= mi18n("ADDITIONAL_CLASS") ?></label>
-    <select name="CMS_VAR[4]" id="additional_class_<?= $uuid ?>" size="1">
+    <select name="CMS_VAR[5]" id="additional_class_<?= $uuid ?>" size="1">
       <option value="false"><?= mi18n("SELECT_CHOOSE") ?></option>
       <?php
         foreach ($classes as $class) {
