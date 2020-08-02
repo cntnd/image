@@ -13,7 +13,7 @@ $fancyboxGroup = "CMS_VALUE[2]";
 $fancyboxThumb = (bool) "CMS_VALUE[3]";
 $fancyboxPath = "CMS_VALUE[4]";
 $additionalClass = "CMS_VALUE[5]";
-if (!$additionalClass){
+if (!$additionalClass || $additionalClass=="false"){
     $additionalClass="";
 }
 
