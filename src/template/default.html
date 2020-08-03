@@ -1,13 +1,18 @@
-<!-- cntnd_navigation/template/default.html -->
+<!-- cntnd_image/template/default.html -->
 {$editor}
+{if NULL neq $linkEditor}
+	{$linkEditor}
+{/if}
 
 {if NULL neq $image}
 	{if $fancybox}
 		<a href="{$image->src}"
 			{if 0 lt $fancyboxGroup|strlen}data-fancybox="{$fancyboxGroup}"{else}data-fancybox{/if}
 			{if 0 lt $image->alt|strlen}data-caption="{$image->alt}"{/if}>
+	{else if $link and NULL neq $linkSource}
+		<a href="{$linkSource}" target="{$linkTarget}">
 	{/if}
-    <img src="{$image->thumb}" alt="{$image->alt}" class="{$additionalClass}" />
-	{if $fancybox eq "active" or 0 lt $link|strlen}</a>{/if}
+    <img src="{$image->thumb}" alt="{$image->alt}" class="{$additionalClass} {$hoverClass}" {if $hover}data-hover-in="{$hoverImage}" data-hover-out="{$image->src}"{/if}/>
+	{if $fancybox eq "active" or $link}</a>{/if}
 {/if}
-<!-- cntnd_navigation/template/default.html -->
+<!-- cntnd_image/template/default.html -->

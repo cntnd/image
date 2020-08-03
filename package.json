@@ -1,6 +1,6 @@
 {
   "name": "cntnd_image",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Core Image",
   "devDependencies": {
     "del": "^5.1.0",

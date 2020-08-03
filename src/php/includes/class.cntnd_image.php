@@ -37,5 +37,12 @@ class CntndImage {
     return $image;
   }
 
+    public static function hoverImage($image, $suffix="-over"){
+        $index = strrpos($image,'.');
+        $name = substr($image,0,$index);
+        $extension 	= substr($image,$index);
+        return $name.$suffix.$extension;
+    }
+
 }
 ?>
