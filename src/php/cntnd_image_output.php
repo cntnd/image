@@ -1,5 +1,6 @@
 <?php
-// cntnd_navigation_output
+// cntnd_image_output
+$cntnd_module = "cntnd_image";
 
 // assert framework initialization
 defined('CON_FRAMEWORK') || die('Illegal call: Missing framework initialization - request aborted.');
@@ -9,6 +10,9 @@ $editmode = cRegistry::isBackendEditMode();
 
 // includes
 cInclude('module', 'includes/class.cntnd_image.php');
+if ($editmode) {
+    cInclude('module', 'includes/style.cntnd_image.php');
+}
 
 // input/vars
 $type = "CMS_VALUE[1]";
@@ -54,7 +58,7 @@ if ($hover){
 
 // module
 if ($editmode){
-	echo '<div class="content_box"><label class="content_type_label">'.mi18n("MODULE").'</label>';
+    echo '<span class="module_box"><label class="module_label">'.mi18n("MODULE").'</label></span>';
 }
 
 $tpl = cSmartyFrontend::getInstance();

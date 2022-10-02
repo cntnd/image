@@ -1,5 +1,6 @@
 ?><?php
 // cntnd_image_input
+$cntnd_module = "cntnd_image";
 
 // input/vars
 $uuid = rand();
@@ -37,7 +38,7 @@ $classes = array(
 );
 
 // includes
-cInclude('module', 'includes/style.cntnd_image_input.php');
+cInclude('module', 'includes/style.cntnd_image.php');
 
 ?>
 <div class="form-vertical">
